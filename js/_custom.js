@@ -105,7 +105,7 @@ $(document).ready(function () {
   });
 
   // Masks
-  $(".phoneMask").mask("+7 (999) 999-9999");
+  // $(".phoneMask").mask("+7 (999) 999-9999");
 
   // Переключение языка
   $(".header__lang__link").on("click", function () {
@@ -117,5 +117,58 @@ $(document).ready(function () {
   $(".add__lisence").on("click", function () {
     $(this).parent().find(".form__section__line").removeClass("hide");
     $(this).hide();
+  });
+
+  // Online Office
+  // Selling Slider
+  // About Slider
+  $("#sellingSlider").not(".slick-initialized").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    asNavFor: "#sellingNav",
+  });
+
+  $("#sellingNav").not(".slick-initialized").slick({
+    arrows: false,
+    slidesToShow: 5,
+    asNavFor: "#sellingSlider",
+    focusOnSelect: true,
+  });
+
+  // What Slider
+  $("#whatSlider")
+    .not(".slick-initialized")
+    .slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: $(".what__arrow--next"),
+      prevArrow: $(".what__arrow--prev"),
+    });
+
+  // Advantages Slider
+  // $("#advantagesSlider").not(".slick-initialized").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   arrows: false,
+  // });
+
+  // Modern Slider
+  $("#modernSlider")
+    .not(".slick-initialized")
+    .slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: "#modernNav",
+      nextArrow: $(".modern__arrow--next"),
+      prevArrow: $(".modern__arrow--prev"),
+    });
+
+  $("#modernNav").not(".slick-initialized").slick({
+    arrows: false,
+    slidesToShow: 5,
+    asNavFor: "#modernSlider",
+    focusOnSelect: true,
   });
 });

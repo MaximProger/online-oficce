@@ -787,6 +787,16 @@ body.brif {
   font-size: 18px;
 }
 
+.brif__btn__wrapper {
+  text-align: center;
+  margin-top: 25px;
+
+  .btn {
+    width: 194px;
+    padding: 13px 0;
+  }
+}
+
 @media (max-width: $tablet) {
   .brif {
     background: none !important;
