@@ -1,6 +1,7 @@
 @import "vars";
 
 .onlineoffice {
+  background: url("../img/common/body__bg--brif.png");
   .btn {
     padding: 12px 40px;
   }
@@ -185,8 +186,6 @@
 // Advantages
 .advantages {
   margin-top: 105px;
-  height: 510px;
-  background: #e5e5e5;
 
   // .container {
   //   margin-right: 0;
@@ -235,14 +234,13 @@
 .advantages__inner {
   position: relative;
   height: 100%;
-  height: 510px;
 }
 
 .advantages__slider__nav {
   position: absolute;
-  left: 0;
+  left: 7vw;
   bottom: 42px;
-  width: 47%;
+  width: 34%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -264,30 +262,33 @@
 .advantages__slide {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .advantages__item {
-  width: 47%;
+  width: 50%;
+  background: #e5e5e5;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.advantages__item__content {
+  max-width: 567px;
+  margin-right: 30px;
 }
 
 .advantages__img {
   position: relative;
-
-  img {
-    position: absolute;
-    right: -20vw;
-    top: -230px;
-    width: 910px;
-    height: 565px;
-    min-width: 910px;
-    min-height: 565px;
-  }
+  // width: 60%;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-end;
 }
 
 .advantages__slide__title {
   font-size: 30px;
-  margin-top: 40px;
   margin-bottom: 30px;
 }
 
@@ -538,4 +539,311 @@
 .tarifs__btn__wrapper {
   margin-top: 60px;
   text-align: center;
+}
+
+@media (max-width: $tablet) {
+  .advantages__slide {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    padding: 0 15px;
+    padding-top: 30px;
+    height: 700px;
+    align-items: flex-start;
+  }
+
+  .advantages__item__content {
+    margin-right: 0;
+  }
+
+  .advantages__slider__nav {
+    width: 290px;
+    left: 50%;
+    margin-left: -145px;
+    bottom: auto;
+    top: 50%;
+  }
+
+  .tarifs__inner {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tarifs__item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .what__arrow {
+    position: static;
+  }
+
+  .what__navigation {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .about__dots {
+      // width: 300px;
+      // max-width: 300px;
+    }
+
+    .about__dots__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: none;
+
+      .slick-list.draggable {
+        overflow: visible;
+        width: auto;
+      }
+    }
+
+    .about__dots__item {
+      display: block;
+      width: 12px;
+      height: 12px;
+      max-width: 12px;
+      max-height: 12px;
+      background: #dadada;
+      border-radius: 50%;
+      margin: 0 15px;
+      cursor: pointer;
+      position: relative;
+
+      span {
+        display: none;
+      }
+
+      &.slick-current {
+        background: $blue;
+        overflow: visible;
+        position: relative;
+
+        span {
+          position: absolute;
+          display: block;
+          height: 30px;
+          width: 30px;
+          background: rgba(77, 107, 239, 0.25);
+          border-radius: 50%;
+          top: -8.5px;
+          left: -8.5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .selling {
+    padding-top: 20px;
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .contact__dots {
+      bottom: 20px;
+    }
+  }
+
+  .selling__subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .selling__slide__content {
+    top: 80px;
+    left: 17px;
+    max-width: 237px;
+  }
+
+  .selling__slide__bg {
+    width: 100%;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .selling__slide__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .selling__slide__text {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .what {
+    padding-top: 60px;
+  }
+
+  .what__slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .what__slide__img__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .what__slide__img {
+    width: 118px;
+    height: 120px;
+  }
+
+  .what__slide__title {
+    margin-bottom: 20px;
+  }
+
+  .what__slide__hiddentext {
+    font-family: "Futura Futuris Light";
+    max-width: 160px;
+  }
+
+  .what__slide__img {
+    margin-right: 7px;
+  }
+
+  .what__arrow {
+    min-height: 58px;
+    min-width: 58px;
+  }
+
+  .what__navigation {
+    align-items: inherit;
+    .about__dots__wrapper {
+      width: auto;
+    }
+  }
+
+  .what__btn__wrapper {
+    margin-top: 50px;
+  }
+
+  .advantages {
+    margin-top: 35px;
+  }
+
+  .advantages__slide__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .advantages__slider__nav {
+    top: 50%;
+  }
+
+  .advantages__item {
+    width: 90%;
+  }
+
+  .services {
+    padding-top: 30px;
+  }
+
+  .services__inner {
+    flex-wrap: wrap;
+    padding-left: 25px;
+  }
+
+  .services__item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .services__text {
+    font-size: 18px;
+  }
+
+  .modern {
+    padding-top: 60px;
+  }
+
+  .modern__slide__wrapper {
+    flex-direction: column;
+  }
+
+  .model__slide {
+    img {
+      width: 100%;
+    }
+  }
+
+  .modern__slide__left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .modern__slide__right {
+    width: 100%;
+    height: 50%;
+    padding-left: 17px;
+    padding-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .modern__slide__title {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  .modern__slide__text {
+    max-width: 275px;
+  }
+
+  .modern__arrow {
+    top: auto;
+    bottom: 15px;
+  }
+
+  .tarifs {
+    padding-top: 55px;
+  }
+
+  .tarifs__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .tarifs__item {
+    width: 100%;
+  }
+
+  .tarifs__btn__wrapper {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: $mobile-sm) {
+  .onlineoffice {
+    background: url("../img/common/body__bg--brif--mobile.png");
+  }
+
+  .what__slide__text {
+    max-width: 290px;
+  }
+
+  .what__slide__img__wrapper {
+    justify-content: center;
+  }
+
+  .advantages__slider__nav {
+    top: 70%;
+  }
 }

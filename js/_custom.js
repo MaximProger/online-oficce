@@ -125,7 +125,7 @@ $(document).ready(function () {
   $("#sellingSlider").not(".slick-initialized").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     arrows: false,
     asNavFor: "#sellingNav",
   });
@@ -145,14 +145,33 @@ $(document).ready(function () {
       slidesToScroll: 1,
       nextArrow: $(".what__arrow--next"),
       prevArrow: $(".what__arrow--prev"),
+      asNavFor: "#whatNav",
     });
 
+  $("#whatNav").not(".slick-initialized").slick({
+    arrows: false,
+    slidesToShow: 5,
+    asNavFor: "#whatSlider",
+    focusOnSelect: true,
+  });
+
   // Advantages Slider
-  // $("#advantagesSlider").not(".slick-initialized").slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  // });
+  $("#advantagesSlider")
+    .not(".slick-initialized")
+    .slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      nextArrow: $(".advantages__arrow--next"),
+      prevArrow: $(".advantages__arrow--prev"),
+      asNavFor: "#advantagesNav",
+    });
+
+  $("#advantagesNav").not(".slick-initialized").slick({
+    arrows: false,
+    slidesToShow: 5,
+    asNavFor: "#advantagesSlider",
+    focusOnSelect: true,
+  });
 
   // Modern Slider
   $("#modernSlider")
