@@ -125,7 +125,7 @@ $(document).ready(function () {
   $("#sellingSlider").not(".slick-initialized").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     arrows: false,
     asNavFor: "#sellingNav",
   });
@@ -188,6 +188,23 @@ $(document).ready(function () {
     arrows: false,
     slidesToShow: 5,
     asNavFor: "#modernSlider",
+    focusOnSelect: true,
+  });
+
+  // Global
+  // Platformnews Slider
+  $("#platfornewsSlider").not(".slick-initialized").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+    asNavFor: "#platformnewsNav",
+  });
+
+  $("#platformnewsNav").not(".slick-initialized").slick({
+    arrows: false,
+    slidesToShow: 5,
+    asNavFor: "#platfornewsSlider",
     focusOnSelect: true,
   });
 });
