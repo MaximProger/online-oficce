@@ -1,0 +1,67 @@
+@import "vars";
+
+.exhibition {
+  color: #fff;
+  background: url("../img/exhibition/bg.png") no-repeat top !important;
+
+  .header {
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+  .footer {
+    background: #0f1322 !important;
+  }
+
+  .nav__link {
+    &.active {
+      box-shadow: 0 5px 26px 3px #4d6bef;
+    }
+  }
+
+  .btn {
+    box-shadow: 0 5px 26px 3px #4d6bef;
+
+    &:hover {
+      background: $blue !important;
+      box-shadow: none;
+    }
+  }
+
+  .header__lang__link {
+    color: #fff;
+  }
+
+  .nav {
+    &.active {
+      background: #0f1322 !important;
+    }
+  }
+  .nav__link {
+    color: #fff;
+  }
+
+  .what__arrow {
+    border-color: #31428d;
+  }
+
+  .advantages__item {
+    background: #4d6bef;
+  }
+
+  .services {
+    background: #161b30;
+  }
+
+  .modern {
+    padding-bottom: 100px;
+    background: #161b30;
+  }
+
+  .modern__btn__wrapper {
+    margin-top: 65px;
+    text-align: center;
+  }
+
+  .footer__nav__link {
+    color: #fff;
+  }
+}
