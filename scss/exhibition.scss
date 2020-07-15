@@ -35,6 +35,20 @@
       background: #0f1322 !important;
     }
   }
+
+  .nav-toggle__item {
+    background: #fff !important;
+
+    &::before,
+    &::after {
+      background: #fff !important;
+    }
+  }
+
+  .nav-toggle.active .nav-toggle__item {
+    background-color: transparent !important;
+  }
+
   .nav__link {
     color: #fff;
   }
@@ -63,5 +77,62 @@
 
   .footer__nav__link {
     color: #fff;
+  }
+}
+
+@media (max-width: $mobile) {
+  .header__name__upper {
+    font-size: 18px !important;
+  }
+
+  .header__profile__wrapper {
+    margin-left: 10px !important;
+  }
+
+  .about__dots__item {
+    background: #30418b !important;
+  }
+
+  .advantages__link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  .advantages__item {
+    height: 520px !important;
+  }
+
+  .advantages__slider__nav {
+    top: 45% !important;
+  }
+
+  .services__inner {
+    padding-left: 0 !important;
+    align-items: baseline !important;
+  }
+
+  .services__item {
+    width: 49% !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services__text {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .modern {
+    padding-bottom: 40px !important;
+  }
+
+  .modern__slide__right {
+    border-radius: 0 0 10px 10px !important;
   }
 }
