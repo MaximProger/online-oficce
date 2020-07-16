@@ -214,6 +214,5 @@ $(document).ready(function () {
     event.preventDefault();
     $(this).hide();
     $(this).parent().find("p").removeClass("no-xs");
-    $(this).parent().parent().parent().addClass("active");
   });
 });
