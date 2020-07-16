@@ -2,7 +2,7 @@
 
 .exhibition {
   color: #fff;
-  background: url("../img/exhibition/bg.png") no-repeat top !important;
+  background: url("../img/exhibition/bg.png") no-repeat top #161b30 !important;
 
   .header {
     background: rgba(0, 0, 0, 0.3) !important;
@@ -104,12 +104,16 @@
     }
   }
 
-  .advantages__item {
-    height: 520px !important;
-  }
+  // .advantages__item {
+  //   height: 520px !important;
+
+  //   &.active {
+  //     height: 700px !important;
+  //   }
+  // }
 
   .advantages__slider__nav {
-    top: 45% !important;
+    top: 50% !important;
   }
 
   .services__inner {
